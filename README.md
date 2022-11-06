@@ -18,19 +18,19 @@ $ composer require questocat/laravel-referral
 First add service providers into the config/app.php
 
 ```php
-\Questocat\Referral\ReferralServiceProvider::class,
+\Chiwex\Referral\ReferralServiceProvider::class,
 ```
 
 Publish the migrations
 
 ```bash
-$ php artisan vendor:publish --provider="Questocat\Referral\ReferralServiceProvider" --tag="migrations"
+$ php artisan vendor:publish --provider="Chiwex\Referral\ReferralServiceProvider" --tag="migrations"
 ```
 
 Publish the config
 
 ```bash
-$ php artisan vendor:publish --provider="Questocat\Referral\ReferralServiceProvider" --tag="config"
+$ php artisan vendor:publish --provider="Chiwex\Referral\ReferralServiceProvider" --tag="config"
 ```
 
 ## Setup the model
@@ -38,7 +38,7 @@ $ php artisan vendor:publish --provider="Questocat\Referral\ReferralServiceProvi
 Add UserReferral Trait to your User model.
 
 ```php
-use Questocat\Referral\Traits\UserReferral
+use Chiwex\Referral\Traits\UserReferral
 
 class User extends Model
 {
@@ -54,7 +54,7 @@ Assigning CheckReferral Middleware To Routes.
 // Within App\Http\Kernel Class...
 
 protected $routeMiddleware = [
-    'referral' => \Questocat\Referral\Http\Middleware\CheckReferral::class,
+    'referral' => \Chiwex\Referral\Http\Middleware\CheckReferral::class,
 ];
 ```
 
@@ -68,17 +68,17 @@ Now you can create the user:
 
 ```php
 $user = new App\User();
-$user->name = 'zhengchaopu';
+$user->name = 'chiwex';
 $user->password = bcrypt('password');
-$user->email = 'zhengchaopu@gmail.com';
+$user->email = 'donchiwexco@gmail.com';
 $user->save();
 
 // Or
 
 $data = [
-    'name' => 'zhengchaopu',
+    'name' => 'chiwex',
     'password' => bcrypt('password'),
-    'email' => 'zhengchaopu@gmail.com',
+    'email' => 'donchiwexco@gmail.com',
 ];
 
 App\User::create($data);
