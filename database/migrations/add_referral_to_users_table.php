@@ -1,9 +1,9 @@
 <?php
 
 /*
- * This file is part of questocat/laravel-referral package.
+ * This file is part of chiwex/laravel-referral package.
  *
- * (c) questocat <zhengchaopu@gmail.com>
+ * (c) questocat <donchiwexco@gmail.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
