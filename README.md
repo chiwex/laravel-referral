@@ -12,7 +12,7 @@ A Referral System With Laravel
 Via [Composer](https://getcomposer.org) to add the package to your project's dependencies:
 
 ```bash
-$ composer require questocat/laravel-referral
+$ composer require chiwex/laravel-referral
 ```
 
 First add service providers into the config/app.php
